@@ -1,0 +1,14 @@
+<h1>Emplyee List</h1>
+<ul>
+    {% for e_list in eobject_list %}
+    <li>{{ e_list.emp_name }}  :
+    <a href="{% url 'emp_edit' e_list.emp_id %}">{{ e_list.emp_name }}</a>
+    <a href="{% url 'emp_delete' e_list.emp_id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'emp_new' %}">New</a>
+<p>
+    <a href="{% url 'department' %}">Department</a>
+</p>

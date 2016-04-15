@@ -1,0 +1,11 @@
+<h1>Department List</h1>
+<ul>
+    {% for d_list in dobject_list %}
+    <li>{{ d_list.dept_name }}  :
+    <a href="{% url 'dept_edit' d_list.dept_id %}">{{ d_list.dept_name }}</a>
+    <a href="{% url 'dept_delete' d_list.dept_id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'dept_new'%}">New</a>
